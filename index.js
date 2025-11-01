@@ -1,12 +1,14 @@
 const express = require('express');
 const randomBytes = require('crypto').randomBytes;
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 const port = 4000;
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
+app.use(cors());
 
 const posts = {}
 
